@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
+import Button from "../components/home/Button";
 
-import SideObjects from "../components/SideObjects";
+import SideObjects from "../components/home/SideObjects";
 import { motion } from "framer-motion";
 import Transition from "../components/Transition";
 

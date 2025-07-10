@@ -18,7 +18,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`w-screen h-28 z-10 flex items-center justify-center fixed transition-all duration-300 ${
+      className={`w-screen h-20 z-10 flex items-center justify-center fixed transition-all duration-300 ${
         scrolled ? "backdrop-blur-md bg-white/30" : "bg-transparent"
       }`}
     >

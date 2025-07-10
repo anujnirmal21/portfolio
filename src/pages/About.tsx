@@ -3,7 +3,7 @@ import Transition from "../components/Transition";
 
 function About() {
   return (
-    <div className=" w-screen flex justify-center items-center">
+    <div className=" w-screen flex justify-center items-center text-primary">
       <div className="lg:w-[70%] flex flex-col gap-10 mt-[20vh] mb-10">
         <motion.h1
           initial={{ y: -40, opacity: 0 }}
