@@ -26,15 +26,15 @@ export const TracingBeam = ({
   }, []);
 
   const y1 = useSpring(
-    useTransform(scrollYProgress, [0, 0.6], [150, svgHeight * 1.1]),
+    useTransform(scrollYProgress, [0, 0.6], [150, svgHeight]),
     {
-      stiffness: 100,
-      damping: 40,
+      stiffness: 50,
+      damping: 30,
     }
   );
   const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [0, svgHeight]), {
-    stiffness: 100,
-    damping: 40,
+    stiffness: 50,
+    damping: 30,
   });
 
   return (
@@ -45,7 +45,7 @@ export const TracingBeam = ({
       <div className="absolute top-3 -left-4 md:-left-20">
         <motion.div
           transition={{
-            duration: 0.2,
+            duration: 0.5,
             delay: 0.5,
           }}
           animate={{
@@ -107,7 +107,9 @@ export const TracingBeam = ({
               <stop offset="0" stopColor="#000000" stopOpacity="0" />
               <stop offset="0" stopColor="#000000" stopOpacity="1" />
               <stop offset="0" stopColor="#000000" stopOpacity="1" />
-              <stop offset="0" stopColor="#000000" stopOpacity="1" />
+              <stop offset="1" stopColor="#000000" stopOpacity="1" />
+              <stop offset="1" stopColor="#000000" stopOpacity="1" />
+              <stop offset="0" stopColor="#000000" stopOpacity="0" />
               <stop offset="1" stopColor="#000000" stopOpacity="0" />
             </motion.linearGradient>
           </defs>
