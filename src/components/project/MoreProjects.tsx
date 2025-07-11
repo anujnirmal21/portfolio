@@ -21,7 +21,7 @@ function MoreProjects() {
   };
 
   return (
-    <div className="w-screen flex flex-col gap-10 justify-center items-center text-primary min-h-screen -mt-10">
+    <div className="w-screen flex flex-col gap-10 justify-center items-center text-primary my-8">
       <div className="lg:w-[75%] w-full px-6 flex flex-col gap-10">
         <motion.div
           initial={{ y: -40, opacity: 0 }}
