@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { NavLinks } from "../types/constants.ts";
+import { NavLinks } from "../types/types.ts";
 import { Link } from "react-router-dom";
 import Transition from "./Transition.tsx";
 

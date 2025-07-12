@@ -4,6 +4,7 @@ import React from "react";
 import { Dock, DockIcon } from "../ui/Dock";
 import { HomeIcon } from "lucide-react";
 import { FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -12,13 +13,19 @@ export function MobileDock() {
     <div className=" bottom-5 fixed lg:hidden md:hidden block">
       <Dock direction="middle">
         <DockIcon>
-          <HomeIcon className="size-6" />
+          <Link to={"/"}>
+            <HomeIcon className="size-6" />
+          </Link>
         </DockIcon>
         <DockIcon>
-          <Icons.gitHub className="size-6" />
+          <a href="https://github.com/anujnirmal21">
+            <Icons.gitHub className="size-6" />
+          </a>
         </DockIcon>
         <DockIcon>
-          <FaLinkedin className="size-6" />
+          <a href="https://www.linkedin.com/in/anuj-nirmal-6b56a1252/">
+            <FaLinkedin className="size-6" />
+          </a>
         </DockIcon>
         <DockIcon>
           <FaWhatsapp className="size-6" />

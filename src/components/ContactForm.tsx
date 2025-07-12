@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
 import AnimateOnView from "./AnimateOnView";
+import { toast, Toaster } from "react-hot-toast";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ email: "", message: "" });
@@ -14,21 +15,43 @@ const ContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Test ENV", import.meta.env);
 
-    // You can use EmailJS, Formspree, or your backend API here.
-    alert(
-      `Message sent!\n\nEmail: ${formData.email}\nMessage: ${formData.message}`
+    console.log(
+      "EJS:",
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     );
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          user_email: formData.email,
+          message: formData.message,
+        },
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          toast.success("Thanks for reaching out! I'll be in touch soon.");
 
-    // Reset form
-    setFormData({ email: "", message: "" });
+          setFormData({ email: "", message: "" });
+        },
+        (error) => {
+          toast.error("Failed to send message. Please try again.");
+          console.error(error.text);
+        }
+      );
   };
 
   return (
     <StyledWrapper>
       <AnimateOnView>
+        <Toaster />
         <form
-          className="form min-w-xl lg:min-h-[60vh] "
+          className="form lg:min-w-xl sm:min-w-[80%]  lg:min-h-[60vh] "
           onSubmit={handleSubmit}
         >
           <div className="title">

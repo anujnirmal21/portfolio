@@ -8,7 +8,7 @@ function Contact() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen w-screen bg-primary relative overflow-hidden text-poppins text-primary">
+    <div className=" w-screen bg-primary relative overflow-hidden text-poppins text-primary">
       {location.pathname === "/contact" && <SideObjects />}
 
       <div className="lg:w-[75%] w-full px-6 py-24 flex flex-col justify-center items-center gap-12 mx-auto">

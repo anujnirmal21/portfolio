@@ -1,14 +1,14 @@
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { TracingBeam } from "../../ui/TraceBeam";
-import dummyContent from "./data";
-import { LayoutGrid } from "../../ui/LayoutGrid";
 import AnimateOnView from "../AnimateOnView";
+import { DirCard } from "../../ui/DirCard";
+import { projectContent } from "./data";
 
 function BeamSection() {
   return (
-    <TracingBeam className="px-4 sm:px-6 mt-[6vh] w-full">
-      <div className="max-w-4xl mx-auto antialiased pt-4 relative">
-        {dummyContent.map((item, index) => (
+    <TracingBeam className="px-4 sm:px-6 mt-10 lg:mt-[6vh] w-full">
+      <div className=" w-[80%] lg:max-w-4xl mx-auto antialiased pt-4 relative">
+        {projectContent.map((item, index) => (
           <AnimateOnView key={`content-${index}`} delay={0.2 * index}>
             {/* Project Header */}
             <div className="mb-12">
@@ -22,8 +22,28 @@ function BeamSection() {
                   </span>
                 </div>
                 <div className="flex items-center gap-3 self-end sm:self-auto">
-                  <FiGithub className="text-xl sm:text-2xl cursor-pointer hover:scale-110 duration-300 text-primary/70 hover:text-primary" />
-                  <FiExternalLink className="text-xl sm:text-2xl cursor-pointer hover:scale-110 duration-300 text-primary/70 hover:text-primary" />
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FiGithub className="text-xl sm:text-2xl cursor-pointer hover:scale-110 duration-300 text-primary/70 hover:text-primary" />
+                  </a>
+                  <a href={item.live} target="_blank" rel="noopener noreferrer">
+                    <FiExternalLink className="text-xl sm:text-2xl cursor-pointer hover:scale-110 duration-300 text-primary/70 hover:text-primary" />
+                  </a>
+                </div>
+              </div>
+              {/* Project Gallery */}
+              <div className="relative mb-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 rounded-3xl blur-xl" />
+                <div className="relative  border border-primary/10 rounded-3xl p-2 backdrop-blur-sm">
+                  <div className="min-h-[100px] sm:h-[20vh] md:h-[50vh] w-full cursor-pointer rounded-3xl">
+                    <DirCard imageUrl={item.image} className=" rounded-3xl">
+                      <p className="font-bold text-xl">{item.title}</p>
+                      <p className="font-normal text-sm">{item.subTitle}</p>
+                    </DirCard>
+                  </div>
                 </div>
               </div>
 
@@ -31,16 +51,6 @@ function BeamSection() {
               <div className="bg-primary/5 border border-primary/10 rounded-2xl p-4 sm:p-6 backdrop-blur-sm">
                 <div className="prose prose-primary max-w-none text-sm sm:text-base">
                   {item.description}
-                </div>
-              </div>
-            </div>
-
-            {/* Project Gallery */}
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 rounded-3xl blur-xl" />
-              <div className="relative bg-primary/5 border border-primary/10 rounded-3xl p-4 sm:p-6 backdrop-blur-sm">
-                <div className="min-h-[300px] sm:h-[60vh] md:h-[70vh] w-full cursor-pointer">
-                  <LayoutGrid cards={item.cards} />
                 </div>
               </div>
             </div>
@@ -61,10 +71,6 @@ function BeamSection() {
                   </span>
                 </div>
               </div>
-              <button className="group flex items-center justify-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg transition-all duration-300 border border-primary/20">
-                <span className="text-sm font-medium">View Details</span>
-                <FiExternalLink className="text-sm group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
             </div>
           </AnimateOnView>
         ))}

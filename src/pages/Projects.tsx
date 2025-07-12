@@ -10,7 +10,7 @@ const Project = () => {
   return (
     <div className="w-screen flex flex-col gap-10 justify-center items-center text-primary min-h-screen">
       {/* Hero Section */}
-      <div className="lg:w-[75%] w-full px-6 flex flex-col gap-10 mt-10 lg:mt-[15vh] mb-10">
+      <div className="lg:w-[75%] w-full px-6 flex flex-col gap-10 mt-10 lg:mt-[15vh] lg:mb-10">
         <motion.div
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

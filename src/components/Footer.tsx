@@ -32,8 +32,12 @@ const Footer = () => {
           scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
         }}
       >
-        <FaGithub size={30} className=" cursor-pointer hover:scale-105" />
-        <FaLinkedin size={30} className=" cursor-pointer hover:scale-105" />
+        <a href="https://github.com/anujnirmal21">
+          <FaGithub size={30} className=" cursor-pointer hover:scale-105" />
+        </a>
+        <a href="https://www.linkedin.com/in/anuj-nirmal-6b56a1252/">
+          <FaLinkedin size={30} className=" cursor-pointer hover:scale-105" />
+        </a>
       </motion.div>
     </div>
   );
