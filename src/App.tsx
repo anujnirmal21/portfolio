@@ -7,9 +7,11 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <Router>
-      <NavBar />
-      <AnimatedRoutes />
-      <Footer />
+      <div className=" overflow-x-hidden">
+        <NavBar />
+        <AnimatedRoutes />
+        <Footer />
+      </div>
     </Router>
   );
 };

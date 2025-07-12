@@ -43,7 +43,7 @@ const Home = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 1.6, duration: 0.6 }}
           >
-            <Button text="About Me" click={() => navigate("/main")} />
+            <Button text="Dive In" click={() => navigate("/main")} />
           </motion.div>
         </div>
 
