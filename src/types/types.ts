@@ -1,3 +1,5 @@
+import { type ReactNode } from "react";
+
 type links = {
   name: string;
   link: string;
@@ -21,3 +23,18 @@ export const NavLinks: links[] = [
     link: "/contact",
   },
 ];
+
+export type Project = {
+  title: string;
+  subTitle: string;
+  github: string;
+  live: string;
+  description: ReactNode;
+  badge: string;
+  image: string;
+};
+
+export type OtherProject = {
+  name: string;
+  url: string;
+};
