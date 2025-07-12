@@ -23,7 +23,7 @@ const NavBar = () => {
       }`}
     >
       <motion.ul
-        className="flex items-center w-[35%] h-[80%] justify-between"
+        className="flex items-center w-[90%] lg:w-[35%] h-[80%] justify-between"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import AnimateOnView from "./AnimateOnView";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({ email: "", message: "" });
@@ -25,40 +26,45 @@ const ContactForm = () => {
 
   return (
     <StyledWrapper>
-      <form className="form min-w-xl lg:min-h-[60vh] " onSubmit={handleSubmit}>
-        <div className="title">
-          Get in touch,
-          <br />
-          <span>we'll respond soon</span>
-        </div>
-
-        <input
-          type="email"
-          placeholder="Your Email"
-          name="email"
-          className="input"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-
-        <textarea
-          name="message"
-          className="textarea"
-          placeholder="Your message..."
-          value={formData.message}
-          onChange={handleChange}
-          rows={5}
-          required
-        ></textarea>
-
-        <button
-          type="submit"
-          className="button-confirm hover:[transform:scale3d(1.1,1.1,1.2)] transition-transform duration-300"
+      <AnimateOnView>
+        <form
+          className="form min-w-xl lg:min-h-[60vh] "
+          onSubmit={handleSubmit}
         >
-          Send →
-        </button>
-      </form>
+          <div className="title">
+            Get in touch,
+            <br />
+            <span>we'll respond soon</span>
+          </div>
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            name="email"
+            className="input"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+
+          <textarea
+            name="message"
+            className="textarea"
+            placeholder="Your message..."
+            value={formData.message}
+            onChange={handleChange}
+            rows={5}
+            required
+          ></textarea>
+
+          <button
+            type="submit"
+            className="button-confirm hover:[transform:scale3d(1.1,1.1,1.2)] transition-transform duration-300"
+          >
+            Send →
+          </button>
+        </form>
+      </AnimateOnView>
     </StyledWrapper>
   );
 };
