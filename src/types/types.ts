@@ -32,6 +32,7 @@ export type Project = {
   description: ReactNode;
   badge: string;
   image: string;
+  stack: string[];
 };
 
 export type OtherProject = {
