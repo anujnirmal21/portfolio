@@ -60,15 +60,11 @@ function BeamSection() {
               <div className="flex flex-wrap items-center gap-2 text-primary/60 text-sm">
                 <span className="">Tech Stack:</span>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-md">
-                    React
-                  </span>
-                  <span className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-md">
-                    Node.js
-                  </span>
-                  <span className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-md">
-                    Tailwind
-                  </span>
+                  {item.stack.map((item) => (
+                    <span className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-md">
+                      {item}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

@@ -28,6 +28,7 @@ const projectContent: Project[] = [
     ),
     badge: "Full-Stack",
     image: "/assets/project/chat1.png",
+    stack: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
   },
   {
     title: "Moviefy",
@@ -52,6 +53,7 @@ const projectContent: Project[] = [
     ),
     badge: "Front-End",
     image: "/assets/project/movie1.png",
+    stack: ["React", "Node.js", "Express", "MongoDB"],
   },
   {
     title: "ThreadSphere",
@@ -76,6 +78,7 @@ const projectContent: Project[] = [
     ),
     badge: "Full-Stack",
     image: "/assets/project/thread1.png",
+    stack: ["React", "Node.js", "Express", "MongoDB"],
   },
 ];
 

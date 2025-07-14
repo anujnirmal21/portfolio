@@ -18,7 +18,7 @@ const Project = () => {
           className="text-start"
         >
           <AnimateOnView>
-            <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold  mb-4">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold  mb-4 lg:mt-0 mt-24">
               Projects
             </h1>
           </AnimateOnView>
