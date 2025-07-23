@@ -89,7 +89,7 @@ const moreProjectContent: OtherProject[] = [
   },
   {
     name: "Finance Landing Page",
-    url: "https://finance-landing-page.vercel.app/",
+    url: "https://anujnirmal21.github.io/Grow_finance/",
   },
 ];
 
