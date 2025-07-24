@@ -24,6 +24,11 @@ export const NavLinks: links[] = [
   },
 ];
 
+export type Skills = {
+  name: string;
+  link: string;
+};
+
 export type Project = {
   title: string;
   subTitle: string;
