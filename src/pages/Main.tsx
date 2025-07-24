@@ -8,10 +8,15 @@ import { MobileDock } from "../components/MobileDock";
 const About = lazy(() => import("./About"));
 const Projects = lazy(() => import("./Projects"));
 const Contact = lazy(() => import("./Contact"));
+const Skills = lazy(() => import("./Skills"));
 
 const Main = () => {
   // Track when each section enters the viewport
   const [aboutRef, aboutInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+  const [skillRef, SkilllsInView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
@@ -29,6 +34,11 @@ const Main = () => {
       <div ref={aboutRef} className="w-full">
         <Suspense fallback={<SectionFallback name="About" />}>
           {aboutInView && <About />}
+        </Suspense>
+      </div>
+      <div ref={skillRef} className="w-full">
+        <Suspense fallback={<SectionFallback name="Skills" />}>
+          {SkilllsInView && <Skills />}
         </Suspense>
       </div>
       <div ref={projectsRef} className="w-full">
