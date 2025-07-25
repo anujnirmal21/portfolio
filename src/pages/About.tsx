@@ -3,13 +3,13 @@ import Transition from "../components/Transition";
 
 function About() {
   return (
-    <div className=" w-screen flex justify-center items-center">
-      <div className="lg:w-[70%] flex flex-col gap-10 mt-[20vh] mb-10">
+    <div className=" w-screen flex justify-center items-center text-primary">
+      <div className=" w-[90%] lg:w-[70%] flex flex-col gap-10 mt-[15vh] lg:mt-[20vh] mb-10 ">
         <motion.h1
           initial={{ y: -40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className=" text-[9rem] mb-5"
+          className=" text-6xl lg:text-[9rem] mb-5  text-center lg:text-start"
         >
           Anuj Nirmal
         </motion.h1>
@@ -17,7 +17,7 @@ function About() {
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className=" text-3xl"
+          className=" text-xl lg:text-3xl"
         >
           I am creative Web developer based in Amravati, Maharashtra, India. I
           am a Computer Engineering graduate and later switched to the awesome

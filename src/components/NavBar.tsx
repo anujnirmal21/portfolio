@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { NavLinks } from "../types/constants.ts";
+import { NavLinks } from "../types/types.ts";
 import { Link } from "react-router-dom";
 import Transition from "./Transition.tsx";
 
@@ -18,12 +18,12 @@ const NavBar = () => {
 
   return (
     <div
-      className={`w-screen h-28 z-10 flex items-center justify-center fixed transition-all duration-300 ${
+      className={`w-screen h-20 z-10 flex items-center justify-center fixed transition-all duration-300 ${
         scrolled ? "backdrop-blur-md bg-white/30" : "bg-transparent"
       }`}
     >
       <motion.ul
-        className="flex items-center w-[35%] h-[80%] justify-between"
+        className="flex items-center w-[90%] lg:w-[35%] h-[80%] justify-between"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
