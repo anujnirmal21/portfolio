@@ -5,7 +5,7 @@ const projectContent: Project[] = [
     title: "EpheChat",
     subTitle: "Real-Time Private & Temporary Chat App",
     github: "https://github.com/anujnirmal21/Chat-App",
-    live: "https://youchat-app.up.railway.app/login",
+    live: "https://ephechat.onrender.com/login",
     description: (
       <ul className=" text-xl list-disc pl-5 space-y-2 text-primary">
         <li>
