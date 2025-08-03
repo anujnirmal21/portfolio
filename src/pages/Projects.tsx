@@ -1,5 +1,3 @@
-"use client";
-
 import AnimateOnView from "../components/AnimateOnView";
 import BeamSection from "../components/project/BeamSection";
 import MoreProjects from "../components/project/MoreProjects";
