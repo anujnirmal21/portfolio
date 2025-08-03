@@ -47,7 +47,7 @@ const ContactForm = () => {
       <AnimateOnView>
         <Toaster />
         <form
-          className="form lg:min-w-xl sm:min-w-[80%]  lg:min-h-[60vh] "
+          className="form lg:min-w-xl w-[90vw]  lg:min-h-[60vh] "
           onSubmit={handleSubmit}
         >
           <div className="title">

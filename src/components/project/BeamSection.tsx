@@ -48,8 +48,8 @@ function BeamSection() {
               </div>
 
               {/* Project Description */}
-              <div className="bg-primary/5 border border-primary/10 rounded-2xl p-4 sm:p-6 backdrop-blur-sm">
-                <div className="prose prose-primary max-w-none text-sm sm:text-base">
+              <div className=" hidden md:block bg-primary/5 border border-primary/10 rounded-2xl p-4 sm:p-6 backdrop-blur-sm">
+                <div className="   prose prose-primary max-w-none text-sm sm:text-base">
                   {item.description}
                 </div>
               </div>
